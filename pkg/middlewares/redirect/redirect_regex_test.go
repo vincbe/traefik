@@ -126,7 +126,7 @@ func TestRedirectRegexHandler(t *testing.T) {
 			expectedStatus: http.StatusFound,
 		},
 		{
-			desc: "HTTP to HTTP POST",
+			desc: "HTTP to HTTPS POST",
 			config: config.RedirectRegex{
 				Regex:       `^http://`,
 				Replacement: "https://$1",
@@ -137,7 +137,7 @@ func TestRedirectRegexHandler(t *testing.T) {
 			expectedStatus: http.StatusTemporaryRedirect,
 		},
 		{
-			desc: "HTTP to HTTP POST permanent",
+			desc: "HTTP to HTTPS POST permanent",
 			config: config.RedirectRegex{
 				Regex:       `^http://`,
 				Replacement: "https://$1",
